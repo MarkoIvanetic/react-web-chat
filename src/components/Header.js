@@ -19,7 +19,6 @@ function Header() {
                 Profile
               </Link>
               <a
-                href=""
                 onClick={e => {
                   e.preventDefault();
                   logout();

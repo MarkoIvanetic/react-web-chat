@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #ececec;
+    background-color: #f0f4fd;
     margin: 0;
 }
 
@@ -10,11 +10,11 @@ header {
     display: flex;
     flex-direction: row;
     padding: 20px;
-    background: #84BFAE;
-     a {
+    background: #84bfae;
+    a {
         color: white;
         text-decoration: none;
-     }
+    }
 }
 
 nav {
@@ -46,10 +46,87 @@ nav {
     display: flex;
 }
 
-.room-container {
+.room-list {
     flex: 1;
+    padding: 10px;
+    background: #2344A5;
+}
+
+.room-container {
+    cursor: pointer;
+    border-left: 2px solid transparent;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    &.active-room {
+        border-color: red;
+    }
+
+    &:hover {
+        border-color: #eee;
+
+    }
+
+    .room-name {
+        padding-left: 10px;
+        color: white;
+    }
+
+    .room-image {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-image: url(images/background_seed.png);
+        /*background-image: url(images/background_seed_25.png);*/
+    }
 }
 
 .chat-container {
-    flex: 3;
+    flex: 5;
+}
+
+/************************************************/
+
+.chat-bubble {
+    display: flex;
+    position: relative;
+    align-items: center;
+    border-radius: 7.5px;
+    background: #fafbff;
+    padding: 10px;
+    margin: 5px;
+    min-width: 20%;
+    max-width: 65%;
+    box-shadow: 0 1px 2px 0 #c9c7c5;
+
+    .chat-info {
+        display: flex;
+        flex-direction: column;
+        font-weight: normal;
+        padding-left: 10px;
+    }
+
+    .chat-time {
+        font-size: 0.75rem;
+        font-style: italic;
+        position: absolute;
+        bottom: 0.25rem;
+        right: 0.5rem;
+    }
+
+    .chat-sender {
+        font-weight: 700;
+    }
+
+    .chat-message {
+        font-size: 0.8875rem;
+    }
+
+    img {
+        height: 40px;
+        border-radius: 50%;
+    }
 }
